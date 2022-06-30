@@ -4,12 +4,12 @@
 pragma solidity 0.8.1;
 pragma abicoder v2;
 
-import "./IRouter.sol";
-import "../IAugustusSwapperV5.sol";
-import "../adapters/IAdapter.sol";
-import "../adapters/IBuyAdapter.sol";
-import "../fee/FeeModel.sol";
-import "../fee/IFeeClaimer.sol";
+import "./Route/IRouter.sol";
+import "./IAugustusSwapperV5.sol";
+import "./adapters/IAdapter.sol";
+import "./adapters/IBuyAdapter.sol";
+import "./fee/FeeModel.sol";
+import "./fee/IFeeClaimer.sol";
 
 contract MultiPath is FeeModel, IRouter {
     using SafeMath for uint256;
@@ -17,7 +17,7 @@ contract MultiPath is FeeModel, IRouter {
     /*solhint-disable no-empty-blocks*/
     constructor(
         uint256 _partnerSharePercent,
-        uint256 _maxFeePercent,
+        uint256 _maxFeePercent ,
         IFeeClaimer _feeClaimer
     ) public FeeModel(_partnerSharePercent, _maxFeePercent, _feeClaimer) {}
 

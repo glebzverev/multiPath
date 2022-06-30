@@ -19,7 +19,7 @@ async function main() {
 
   await augustusSwapper.deployed();
 
-  console.log("Greeter deployed to:", augustusSwapper.address);
+  console.log("AugustusSwapper deployed: ", augustusSwapper.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

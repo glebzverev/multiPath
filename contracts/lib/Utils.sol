@@ -9,17 +9,17 @@ import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "../ITokenTransferProxy.sol";
 
-// interface IERC20Permit {
-//     function permit(
-//         address owner,
-//         address spender,
-//         uint256 amount,
-//         uint256 deadline,
-//         uint8 v,
-//         bytes32 r,
-//         bytes32 s
-//     ) external;
-// }
+interface IERC20Permit {
+    function permit(
+        address owner,
+        address spender,
+        uint256 amount,
+        uint256 deadline,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) external;
+}
 
 interface IERC20PermitLegacy {
     function permit(

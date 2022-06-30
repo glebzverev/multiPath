@@ -14,12 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const AugustusSwapper = await hre.ethers.getContractFactory("AugustusSwapper");
-  const augustusSwapper = await AugustusSwapper.deploy("0x0505c09E927d280845f83c7CC62B0434E653BDe7");
+  const MultiPath = await hre.ethers.getContractFactory("MultiPath");
+  const multiPath = await MultiPath.deploy("100", "100", "0x0505c09E927d280845f83c7CC62B0434E653BDe7");
 
-  await augustusSwapper.deployed();
+  await multiPath.deployed();
 
-  console.log("Greeter deployed to:", augustusSwapper.address);
+  console.log("MultiPath deployed: ", multiPath.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

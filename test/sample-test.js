@@ -1,19 +1,19 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Greeter", function () {
+describe("multiPath", function () {
   it("Should return the new greeting once it's changed", async function () {
-    const Greeter = await ethers.getContractFactory("Greeter");
-    const greeter = await Greeter.deploy("Hello, world!");
-    await greeter.deployed();
+    const AugustusSwapper = await ethers.getContractFactory("AugustusSwapper");
+    const augustusSwapper = await AugustusSwapper.deploy("0x0505c09E927d280845f83c7CC62B0434E653BDe7");
+    await augustusSwapper.deployed();
 
     expect(await greeter.greet()).to.equal("Hello, world!");
 
-    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
+    const setGreetingTx = await augustusSwapper.setGreeting("Hola, mundo!");
 
     // wait until the transaction is mined
     await setGreetingTx.wait();
 
-    expect(await greeter.greet()).to.equal("Hola, mundo!");
+    expect(await augustusSwapper.greet()).to.equal("Hola, mundo!");
   });
 });
