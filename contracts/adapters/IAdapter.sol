@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ISC
 
-pragma solidity 0.7.5;
+pragma solidity 0.8.1;
 pragma abicoder v2;
 
 import "../lib/Utils.sol";

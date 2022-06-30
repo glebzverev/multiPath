@@ -1,7 +1,7 @@
 /*solhint-disable avoid-low-level-calls*/
 // SPDX-License-Identifier: ISC
 
-pragma solidity 0.7.5;
+pragma solidity 0.8.1;
 pragma abicoder v2;
 
 import "./IRouter.sol";
@@ -43,7 +43,7 @@ contract MultiPath is FeeModel, IRouter {
         require(msg.value == (fromToken == Utils.ethAddress() ? fromAmount : 0), "Incorrect msg.value");
         uint256 toAmount = data.toAmount;
         uint256 expectedAmount = data.expectedAmount;
-        address payable beneficiary = data.beneficiary == address(0) ? msg.sender : data.beneficiary;
+        address payable beneficiary = data.beneficiary == address(0) ? payable(msg.sender) : payable(data.beneficiary);
         Utils.Path[] memory path = data.path;
         address toToken = path[path.length - 1].to;
 
@@ -106,7 +106,7 @@ contract MultiPath is FeeModel, IRouter {
         uint256 fromAmount = data.fromAmount;
         require(msg.value == (fromToken == Utils.ethAddress() ? fromAmount : 0), "Incorrect msg.value");
         uint256 toAmount = data.toAmount;
-        address payable beneficiary = data.beneficiary == address(0) ? msg.sender : data.beneficiary;
+        address payable beneficiary = data.beneficiary == address(0) ? payable(msg.sender) : payable(data.beneficiary);
         address toToken = data.toToken;
         uint256 expectedAmount = data.expectedAmount;
 
@@ -126,7 +126,7 @@ contract MultiPath is FeeModel, IRouter {
 
             // Transfer fromToken back to sender
             remainingAmount = Utils.tokenBalance(fromToken, address(this));
-            Utils.transferTokens(fromToken, msg.sender, remainingAmount);
+            Utils.transferTokens(fromToken, payable(msg.sender), remainingAmount);
         } else {
             // Transfer toToken to beneficiary
             Utils.transferTokens(toToken, beneficiary, receivedAmount);
@@ -171,7 +171,7 @@ contract MultiPath is FeeModel, IRouter {
         require(msg.value == (fromToken == Utils.ethAddress() ? fromAmount : 0), "Incorrect msg.value");
         uint256 toAmount = data.toAmount;
         uint256 expectedAmount = data.expectedAmount;
-        address payable beneficiary = data.beneficiary == address(0) ? msg.sender : data.beneficiary;
+        address payable beneficiary = data.beneficiary == address(0) ? payable(msg.sender) : payable(data.beneficiary);
         Utils.MegaSwapPath[] memory path = data.path;
         address toToken = path[0].path[path[0].path.length - 1].to;
 

@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: ISC
 
-pragma solidity 0.7.5;
+pragma solidity 0.8.1;
 
-import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+
 import "../AugustusStorage.sol";
 import "../lib/Utils.sol";
 import "./IFeeClaimer.sol";
@@ -67,7 +68,7 @@ contract FeeModel is AugustusStorage {
             (uint256 partnerShare, uint256 paraswapShare) = _calcFixedFees(fromAmount, fixedFeeBps);
             remainingAmount = _distributeFees(remainingAmount, fromToken, partner, partnerShare, paraswapShare);
         }
-        Utils.transferTokens(fromToken, msg.sender, remainingAmount);
+        Utils.transferTokens(fromToken, payable(msg.sender), remainingAmount);
     }
 
     // Used only for BUY
@@ -93,7 +94,7 @@ contract FeeModel is AugustusStorage {
         }
         Utils.transferTokens(
             fromToken,
-            msg.sender,
+            payable(msg.sender),
             _distributeFees(remainingAmount, fromToken, partner, partnerShare, paraswapShare)
         );
     }
