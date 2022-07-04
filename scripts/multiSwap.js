@@ -29,13 +29,16 @@ const multiPath  = require('../build/contracts/MultiPath.json');
   // await hre.run('compile');
 
   // We get the contract to deploy
+
+var  
+
 var Path = {
     'to': 0x0505c09E927d280845f83c7CC62B0434E653BDe7,
     'totalNetworkFee': 0,
     'adapters': ['0xFE52A550fCD9b47FfE1C7F692AC89C2d06529C30']
 };
 
-var SellData  = {
+var SellData = {
     'fromToken':   0xc2d9D8a97A6E51ADaf22ba63A7ee1E1A0338d384,
     'fromAmount':  100000000000000,
     'toAmount':     10000000000,
