@@ -1,0 +1,1426 @@
+{
+  "contractName": "IFeeClaimer",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "registerFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawAllERC20",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20[]",
+          "name": "_tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        }
+      ],
+      "name": "batchWithdrawAllERC20",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawSomeERC20",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20[]",
+          "name": "_tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_tokenAmounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        }
+      ],
+      "name": "batchWithdrawSomeERC20",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "getUnallocatedFees",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_partner",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20[]",
+          "name": "_tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address",
+          "name": "_partner",
+          "type": "address"
+        }
+      ],
+      "name": "batchGetBalance",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "_fees",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.1+commit.df193b15\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20[]\",\"name\":\"_tokens\",\"type\":\"address[]\"},{\"internalType\":\"address\",\"name\":\"_partner\",\"type\":\"address\"}],\"name\":\"batchGetBalance\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"_fees\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20[]\",\"name\":\"_tokens\",\"type\":\"address[]\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"}],\"name\":\"batchWithdrawAllERC20\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20[]\",\"name\":\"_tokens\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_tokenAmounts\",\"type\":\"uint256[]\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"}],\"name\":\"batchWithdrawSomeERC20\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_partner\",\"type\":\"address\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"getUnallocatedFees\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_fee\",\"type\":\"uint256\"}],\"name\":\"registerFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"}],\"name\":\"withdrawAllERC20\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenAmount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"}],\"name\":\"withdrawSomeERC20\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"batchGetBalance(address[],address)\":{\"details\":\"retrieves the balance of ERC20 token fee amount for a partner in batch\",\"params\":{\"_partner\":\"account address of the partner\",\"_tokens\":\"list of ERC20 token addresses\"},\"returns\":{\"_fees\":\"array of the token amount\"}},\"batchWithdrawAllERC20(address[],address)\":{\"details\":\"transfers ERC20 token balance to the caller's account      the call will fail if withdrawer have zero balance in the contract\",\"params\":{\"_recipient\":\"address of recipient\",\"_tokens\":\"list of addresses of the ERC20 token\"},\"returns\":{\"_0\":\"true if the withdraw was successfull\"}},\"batchWithdrawSomeERC20(address[],uint256[],address)\":{\"details\":\"transfers ERC20 token balance to the caller's account      the call will fail if withdrawer have zero balance in the contract\",\"params\":{\"_recipient\":\"destination account addresses\",\"_tokenAmounts\":\"array of amounts\",\"_tokens\":\"address of the ERC20 tokens\"},\"returns\":{\"_0\":\"true if the withdraw was successfull\"}},\"getBalance(address,address)\":{\"details\":\"retrieves the balance of ERC20 token fee amount for a partner\",\"params\":{\"_partner\":\"account address of the partner\",\"_token\":\"address of the ERC20 token\"},\"returns\":{\"_0\":\"amount of balance\"}},\"getUnallocatedFees(address)\":{\"params\":{\"_token\":\"address of the ERC20 token\"},\"returns\":{\"_0\":\"amount of unallocated token in fees\"}},\"registerFee(address,address,uint256)\":{\"details\":\"only callable by AugustusSwapper contract\",\"params\":{\"_account\":\"account address used to withdraw fees\",\"_fee\":\"fee amount in token\",\"_token\":\"token address\"}},\"withdrawAllERC20(address,address)\":{\"details\":\"transfers ERC20 token balance to the caller's account      the call will fail if withdrawer have zero balance in the contract\",\"params\":{\"_recipient\":\"address\",\"_token\":\"address of the ERC20 token\"},\"returns\":{\"_0\":\"true if the withdraw was successfull\"}},\"withdrawSomeERC20(address,uint256,address)\":{\"details\":\"transfers ERC20 token amount to the caller's account      the call will fail if withdrawer have zero balance in the contract\",\"params\":{\"_recipient\":\"address\",\"_token\":\"address of the ERC20 token\"},\"returns\":{\"_0\":\"true if the withdraw was successfull\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"batchGetBalance(address[],address)\":{\"notice\":\"returns unclaimed fee amount given the token in batch\"},\"batchWithdrawAllERC20(address[],address)\":{\"notice\":\"batch claim whole balance of fee share amount\"},\"batchWithdrawSomeERC20(address[],uint256[],address)\":{\"notice\":\"batch claim some amount of fee share in ERC20 token\"},\"getBalance(address,address)\":{\"notice\":\"returns unclaimed fee amount given the token\"},\"getUnallocatedFees(address)\":{\"notice\":\"compute unallocated fee in token\"},\"registerFee(address,address,uint256)\":{\"notice\":\"register partner's, affiliate's and PP's fee\"},\"withdrawAllERC20(address,address)\":{\"notice\":\"claim partner share fee in ERC20 token\"},\"withdrawSomeERC20(address,uint256,address)\":{\"notice\":\"claim some partner share fee in ERC20 token\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/fee/IFeeClaimer.sol\":\"IFeeClaimer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://087318b21c528119f649899f5b5580566dd8d7b0303d4904bd0e8580c3545f14\",\"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL\"]},\"project:/contracts/fee/IFeeClaimer.sol\":{\"keccak256\":\"0x46919b0a7657ba399d1128fd774b7c56065a268d44245d7dc58576133382c7f7\",\"license\":\"ISC\",\"urls\":[\"bzz-raw://d4ae4f536478ac8e631e29493abd65b70be2bab32c61b4118d23f6e7706c1809\",\"dweb:/ipfs/QmacHYif8asXCEfHz7Vdw5fm5wgheBvh24JnrUrfhWEvkR\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: ISC\r\n\r\npragma solidity 0.8.1;\r\n\r\nimport { IERC20 } from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\r\n\r\ninterface IFeeClaimer {\r\n    /**\r\n     * @notice register partner's, affiliate's and PP's fee\r\n     * @dev only callable by AugustusSwapper contract\r\n     * @param _account account address used to withdraw fees\r\n     * @param _token token address\r\n     * @param _fee fee amount in token\r\n     */\r\n    function registerFee(\r\n        address _account,\r\n        IERC20 _token,\r\n        uint256 _fee\r\n    ) external;\r\n\r\n    /**\r\n     * @notice claim partner share fee in ERC20 token\r\n     * @dev transfers ERC20 token balance to the caller's account\r\n     *      the call will fail if withdrawer have zero balance in the contract\r\n     * @param _token address of the ERC20 token\r\n     * @param _recipient address\r\n     * @return true if the withdraw was successfull\r\n     */\r\n    function withdrawAllERC20(IERC20 _token, address _recipient) external returns (bool);\r\n\r\n    /**\r\n     * @notice batch claim whole balance of fee share amount\r\n     * @dev transfers ERC20 token balance to the caller's account\r\n     *      the call will fail if withdrawer have zero balance in the contract\r\n     * @param _tokens list of addresses of the ERC20 token\r\n     * @param _recipient address of recipient\r\n     * @return true if the withdraw was successfull\r\n     */\r\n    function batchWithdrawAllERC20(IERC20[] calldata _tokens, address _recipient) external returns (bool);\r\n\r\n    /**\r\n     * @notice claim some partner share fee in ERC20 token\r\n     * @dev transfers ERC20 token amount to the caller's account\r\n     *      the call will fail if withdrawer have zero balance in the contract\r\n     * @param _token address of the ERC20 token\r\n     * @param _recipient address\r\n     * @return true if the withdraw was successfull\r\n     */\r\n    function withdrawSomeERC20(\r\n        IERC20 _token,\r\n        uint256 _tokenAmount,\r\n        address _recipient\r\n    ) external returns (bool);\r\n\r\n    /**\r\n     * @notice batch claim some amount of fee share in ERC20 token\r\n     * @dev transfers ERC20 token balance to the caller's account\r\n     *      the call will fail if withdrawer have zero balance in the contract\r\n     * @param _tokens address of the ERC20 tokens\r\n     * @param _tokenAmounts array of amounts\r\n     * @param _recipient destination account addresses\r\n     * @return true if the withdraw was successfull\r\n     */\r\n    function batchWithdrawSomeERC20(\r\n        IERC20[] calldata _tokens,\r\n        uint256[] calldata _tokenAmounts,\r\n        address _recipient\r\n    ) external returns (bool);\r\n\r\n    /**\r\n     * @notice compute unallocated fee in token\r\n     * @param _token address of the ERC20 token\r\n     * @return amount of unallocated token in fees\r\n     */\r\n    function getUnallocatedFees(IERC20 _token) external view returns (uint256);\r\n\r\n    /**\r\n     * @notice returns unclaimed fee amount given the token\r\n     * @dev retrieves the balance of ERC20 token fee amount for a partner\r\n     * @param _token address of the ERC20 token\r\n     * @param _partner account address of the partner\r\n     * @return amount of balance\r\n     */\r\n    function getBalance(IERC20 _token, address _partner) external view returns (uint256);\r\n\r\n    /**\r\n     * @notice returns unclaimed fee amount given the token in batch\r\n     * @dev retrieves the balance of ERC20 token fee amount for a partner in batch\r\n     * @param _tokens list of ERC20 token addresses\r\n     * @param _partner account address of the partner\r\n     * @return _fees array of the token amount\r\n     */\r\n    function batchGetBalance(IERC20[] calldata _tokens, address _partner)\r\n        external\r\n        view\r\n        returns (uint256[] memory _fees);\r\n}",
+  "sourcePath": "C:\\Users\\23396\\multiPath\\contracts\\fee\\IFeeClaimer.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/fee/IFeeClaimer.sol",
+    "exportedSymbols": {
+      "IERC20": [
+        77
+      ],
+      "IFeeClaimer": [
+        5748
+      ]
+    },
+    "id": 5749,
+    "license": "ISC",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5650,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:22:13"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 5652,
+        "nodeType": "ImportDirective",
+        "scope": 5749,
+        "sourceUnit": 78,
+        "src": "61:72:13",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 5651,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:6:13",
+              "typeDescriptions": {}
+            }
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 5748,
+        "linearizedBaseContracts": [
+          5748
+        ],
+        "name": "IFeeClaimer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 5653,
+              "nodeType": "StructuredDocumentation",
+              "src": "166:266:13",
+              "text": " @notice register partner's, affiliate's and PP's fee\n @dev only callable by AugustusSwapper contract\n @param _account account address used to withdraw fees\n @param _token token address\n @param _fee fee amount in token"
+            },
+            "functionSelector": "d1f4354b",
+            "id": 5663,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerFee",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5661,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5655,
+                  "mutability": "mutable",
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5663,
+                  "src": "469:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5654,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "469:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5658,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5663,
+                  "src": "496:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5657,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5656,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "496:6:13"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "496:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5660,
+                  "mutability": "mutable",
+                  "name": "_fee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5663,
+                  "src": "520:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5659,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "458:81:13"
+            },
+            "returnParameters": {
+              "id": 5662,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "548:0:13"
+            },
+            "scope": 5748,
+            "src": "438:111:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5664,
+              "nodeType": "StructuredDocumentation",
+              "src": "557:350:13",
+              "text": " @notice claim partner share fee in ERC20 token\n @dev transfers ERC20 token balance to the caller's account\n      the call will fail if withdrawer have zero balance in the contract\n @param _token address of the ERC20 token\n @param _recipient address\n @return true if the withdraw was successfull"
+            },
+            "functionSelector": "ae11c7f8",
+            "id": 5674,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAllERC20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5670,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5667,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5674,
+                  "src": "939:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5666,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5665,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "939:6:13"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "939:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5669,
+                  "mutability": "mutable",
+                  "name": "_recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5674,
+                  "src": "954:18:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5668,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "954:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "938:35:13"
+            },
+            "returnParameters": {
+              "id": 5673,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5672,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5674,
+                  "src": "992:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5671,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "991:6:13"
+            },
+            "scope": 5748,
+            "src": "913:85:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5675,
+              "nodeType": "StructuredDocumentation",
+              "src": "1006:381:13",
+              "text": " @notice batch claim whole balance of fee share amount\n @dev transfers ERC20 token balance to the caller's account\n      the call will fail if withdrawer have zero balance in the contract\n @param _tokens list of addresses of the ERC20 token\n @param _recipient address of recipient\n @return true if the withdraw was successfull"
+            },
+            "functionSelector": "bbedcc40",
+            "id": 5686,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchWithdrawAllERC20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5679,
+                  "mutability": "mutable",
+                  "name": "_tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5686,
+                  "src": "1424:25:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IERC20_$77_$dyn_calldata_ptr",
+                    "typeString": "contract IERC20[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5677,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 5676,
+                        "name": "IERC20",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 77,
+                        "src": "1424:6:13"
+                      },
+                      "referencedDeclaration": 77,
+                      "src": "1424:6:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$77",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "id": 5678,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1424:8:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IERC20_$77_$dyn_storage_ptr",
+                      "typeString": "contract IERC20[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5681,
+                  "mutability": "mutable",
+                  "name": "_recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5686,
+                  "src": "1451:18:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5680,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1451:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1423:47:13"
+            },
+            "returnParameters": {
+              "id": 5685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5684,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5686,
+                  "src": "1489:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5683,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1489:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1488:6:13"
+            },
+            "scope": 5748,
+            "src": "1393:102:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5687,
+              "nodeType": "StructuredDocumentation",
+              "src": "1503:354:13",
+              "text": " @notice claim some partner share fee in ERC20 token\n @dev transfers ERC20 token amount to the caller's account\n      the call will fail if withdrawer have zero balance in the contract\n @param _token address of the ERC20 token\n @param _recipient address\n @return true if the withdraw was successfull"
+            },
+            "functionSelector": "8f79528c",
+            "id": 5699,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawSomeERC20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5695,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5690,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5699,
+                  "src": "1900:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5689,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5688,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "1900:6:13"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "1900:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5692,
+                  "mutability": "mutable",
+                  "name": "_tokenAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5699,
+                  "src": "1924:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5691,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1924:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5694,
+                  "mutability": "mutable",
+                  "name": "_recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5699,
+                  "src": "1955:18:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5693,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1955:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1889:91:13"
+            },
+            "returnParameters": {
+              "id": 5698,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5697,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5699,
+                  "src": "1999:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5696,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1999:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1998:6:13"
+            },
+            "scope": 5748,
+            "src": "1863:142:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5700,
+              "nodeType": "StructuredDocumentation",
+              "src": "2013:433:13",
+              "text": " @notice batch claim some amount of fee share in ERC20 token\n @dev transfers ERC20 token balance to the caller's account\n      the call will fail if withdrawer have zero balance in the contract\n @param _tokens address of the ERC20 tokens\n @param _tokenAmounts array of amounts\n @param _recipient destination account addresses\n @return true if the withdraw was successfull"
+            },
+            "functionSelector": "ffcc41ee",
+            "id": 5714,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchWithdrawSomeERC20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5710,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5704,
+                  "mutability": "mutable",
+                  "name": "_tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5714,
+                  "src": "2494:25:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IERC20_$77_$dyn_calldata_ptr",
+                    "typeString": "contract IERC20[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5702,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 5701,
+                        "name": "IERC20",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 77,
+                        "src": "2494:6:13"
+                      },
+                      "referencedDeclaration": 77,
+                      "src": "2494:6:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$77",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "id": 5703,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2494:8:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IERC20_$77_$dyn_storage_ptr",
+                      "typeString": "contract IERC20[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5707,
+                  "mutability": "mutable",
+                  "name": "_tokenAmounts",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5714,
+                  "src": "2530:32:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5705,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2530:7:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 5706,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2530:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5709,
+                  "mutability": "mutable",
+                  "name": "_recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5714,
+                  "src": "2573:18:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5708,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2573:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2483:115:13"
+            },
+            "returnParameters": {
+              "id": 5713,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5712,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5714,
+                  "src": "2617:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5711,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2617:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2616:6:13"
+            },
+            "scope": 5748,
+            "src": "2452:171:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5715,
+              "nodeType": "StructuredDocumentation",
+              "src": "2631:162:13",
+              "text": " @notice compute unallocated fee in token\n @param _token address of the ERC20 token\n @return amount of unallocated token in fees"
+            },
+            "functionSelector": "f89abe8c",
+            "id": 5723,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnallocatedFees",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5719,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5718,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5723,
+                  "src": "2827:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5717,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5716,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "2827:6:13"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "2827:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2826:15:13"
+            },
+            "returnParameters": {
+              "id": 5722,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5721,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5723,
+                  "src": "2865:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5720,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2865:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2864:9:13"
+            },
+            "scope": 5748,
+            "src": "2799:75:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5724,
+              "nodeType": "StructuredDocumentation",
+              "src": "2882:286:13",
+              "text": " @notice returns unclaimed fee amount given the token\n @dev retrieves the balance of ERC20 token fee amount for a partner\n @param _token address of the ERC20 token\n @param _partner account address of the partner\n @return amount of balance"
+            },
+            "functionSelector": "d4fac45d",
+            "id": 5734,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5727,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5734,
+                  "src": "3194:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5726,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5725,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "3194:6:13"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "3194:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5729,
+                  "mutability": "mutable",
+                  "name": "_partner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5734,
+                  "src": "3209:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5728,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3209:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3193:33:13"
+            },
+            "returnParameters": {
+              "id": 5733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5732,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5734,
+                  "src": "3250:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5731,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3250:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3249:9:13"
+            },
+            "scope": 5748,
+            "src": "3174:85:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 5735,
+              "nodeType": "StructuredDocumentation",
+              "src": "3267:322:13",
+              "text": " @notice returns unclaimed fee amount given the token in batch\n @dev retrieves the balance of ERC20 token fee amount for a partner in batch\n @param _tokens list of ERC20 token addresses\n @param _partner account address of the partner\n @return _fees array of the token amount"
+            },
+            "functionSelector": "b0a65b17",
+            "id": 5747,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchGetBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5742,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5739,
+                  "mutability": "mutable",
+                  "name": "_tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5747,
+                  "src": "3620:25:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IERC20_$77_$dyn_calldata_ptr",
+                    "typeString": "contract IERC20[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5737,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 5736,
+                        "name": "IERC20",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 77,
+                        "src": "3620:6:13"
+                      },
+                      "referencedDeclaration": 77,
+                      "src": "3620:6:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$77",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "id": 5738,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3620:8:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IERC20_$77_$dyn_storage_ptr",
+                      "typeString": "contract IERC20[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5741,
+                  "mutability": "mutable",
+                  "name": "_partner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5747,
+                  "src": "3647:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5740,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3647:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3619:45:13"
+            },
+            "returnParameters": {
+              "id": 5746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5745,
+                  "mutability": "mutable",
+                  "name": "_fees",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5747,
+                  "src": "3715:22:13",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5743,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "3715:7:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 5744,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3715:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3714:24:13"
+            },
+            "scope": 5748,
+            "src": "3595:144:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5749,
+        "src": "137:3605:13"
+      }
+    ],
+    "src": "35:3707:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.1+commit.df193b15.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-07-04T14:21:43.450Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "batchGetBalance(address[],address)": {
+        "details": "retrieves the balance of ERC20 token fee amount for a partner in batch",
+        "params": {
+          "_partner": "account address of the partner",
+          "_tokens": "list of ERC20 token addresses"
+        },
+        "returns": {
+          "_fees": "array of the token amount"
+        }
+      },
+      "batchWithdrawAllERC20(address[],address)": {
+        "details": "transfers ERC20 token balance to the caller's account      the call will fail if withdrawer have zero balance in the contract",
+        "params": {
+          "_recipient": "address of recipient",
+          "_tokens": "list of addresses of the ERC20 token"
+        },
+        "returns": {
+          "_0": "true if the withdraw was successfull"
+        }
+      },
+      "batchWithdrawSomeERC20(address[],uint256[],address)": {
+        "details": "transfers ERC20 token balance to the caller's account      the call will fail if withdrawer have zero balance in the contract",
+        "params": {
+          "_recipient": "destination account addresses",
+          "_tokenAmounts": "array of amounts",
+          "_tokens": "address of the ERC20 tokens"
+        },
+        "returns": {
+          "_0": "true if the withdraw was successfull"
+        }
+      },
+      "getBalance(address,address)": {
+        "details": "retrieves the balance of ERC20 token fee amount for a partner",
+        "params": {
+          "_partner": "account address of the partner",
+          "_token": "address of the ERC20 token"
+        },
+        "returns": {
+          "_0": "amount of balance"
+        }
+      },
+      "getUnallocatedFees(address)": {
+        "params": {
+          "_token": "address of the ERC20 token"
+        },
+        "returns": {
+          "_0": "amount of unallocated token in fees"
+        }
+      },
+      "registerFee(address,address,uint256)": {
+        "details": "only callable by AugustusSwapper contract",
+        "params": {
+          "_account": "account address used to withdraw fees",
+          "_fee": "fee amount in token",
+          "_token": "token address"
+        }
+      },
+      "withdrawAllERC20(address,address)": {
+        "details": "transfers ERC20 token balance to the caller's account      the call will fail if withdrawer have zero balance in the contract",
+        "params": {
+          "_recipient": "address",
+          "_token": "address of the ERC20 token"
+        },
+        "returns": {
+          "_0": "true if the withdraw was successfull"
+        }
+      },
+      "withdrawSomeERC20(address,uint256,address)": {
+        "details": "transfers ERC20 token amount to the caller's account      the call will fail if withdrawer have zero balance in the contract",
+        "params": {
+          "_recipient": "address",
+          "_token": "address of the ERC20 token"
+        },
+        "returns": {
+          "_0": "true if the withdraw was successfull"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "batchGetBalance(address[],address)": {
+        "notice": "returns unclaimed fee amount given the token in batch"
+      },
+      "batchWithdrawAllERC20(address[],address)": {
+        "notice": "batch claim whole balance of fee share amount"
+      },
+      "batchWithdrawSomeERC20(address[],uint256[],address)": {
+        "notice": "batch claim some amount of fee share in ERC20 token"
+      },
+      "getBalance(address,address)": {
+        "notice": "returns unclaimed fee amount given the token"
+      },
+      "getUnallocatedFees(address)": {
+        "notice": "compute unallocated fee in token"
+      },
+      "registerFee(address,address,uint256)": {
+        "notice": "register partner's, affiliate's and PP's fee"
+      },
+      "withdrawAllERC20(address,address)": {
+        "notice": "claim partner share fee in ERC20 token"
+      },
+      "withdrawSomeERC20(address,uint256,address)": {
+        "notice": "claim some partner share fee in ERC20 token"
+      }
+    },
+    "version": 1
+  }
+}

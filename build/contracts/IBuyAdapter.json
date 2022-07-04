@@ -1,0 +1,469 @@
+{
+  "contractName": "IBuyAdapter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "fromToken",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "toToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxFromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "toAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "targetExchange",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "payload",
+          "type": "bytes"
+        }
+      ],
+      "name": "buy",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.1+commit.df193b15\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20\",\"name\":\"fromToken\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"toToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"maxFromAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"toAmount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"targetExchange\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"payload\",\"type\":\"bytes\"}],\"name\":\"buy\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"buy(uint256,address,address,uint256,uint256,address,bytes)\":{\"details\":\"The function which performs the swap on an exchange.\",\"params\":{\"fromToken\":\"Address of the source token\",\"index\":\"Index of the router in the adapter\",\"maxFromAmount\":\"Max amount of source tokens to be swapped\",\"payload\":\"extra data which needs to be passed to this router\",\"targetExchange\":\"Target exchange address to be called\",\"toAmount\":\"Amount of destination tokens to be received\",\"toToken\":\"Address of the destination token\"}},\"initialize(bytes)\":{\"details\":\"Certain adapters needs to be initialized. This method will be called from Augustus\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/adapters/IBuyAdapter.sol\":\"IBuyAdapter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://087318b21c528119f649899f5b5580566dd8d7b0303d4904bd0e8580c3545f14\",\"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL\"]},\"@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol\":{\"keccak256\":\"0x02348b2e4b9f3200c7e3907c5c2661643a6d8520e9f79939fbb9b4005a54894d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d41d627f4ef9c6006df8c2d01227d3cf4a6c3359b5704c629d88933272eecadd\",\"dweb:/ipfs/QmYDo7MvMsvuDxuJZ9RC9zFganS3Tm8RYzSmBP5qSmJfuY\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x3336baae5cf23e94274d75336e2d412193be508504aee185e61dc7d58cd05c8a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39a05eec7083dfa0cc7e0cbfe6cd1bd085a340af1ede93fdff3ad047c5fb3d8e\",\"dweb:/ipfs/QmVApz5fCUq2QC8gKTsNNdCmcedJ3ETHp68zR5N3WUKS4r\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x8666f020bd8fc9dc14f07e2ebc52b5f236ab4cdde7c77679b08cb2f94730043b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://163776cbf565c722232393aa2d62cbe8a2ffb5805986abf4906c00e1e07450a6\",\"dweb:/ipfs/QmPZoN9T3cb6o8bGhjBPZcz7im8T8DWhpr3tjLwhJJHx9N\"]},\"project:/contracts/ITokenTransferProxy.sol\":{\"keccak256\":\"0xbc83a40b3e3d7832b29bfed01dc9dcfe0dc3087949066c75af6313b35484fb72\",\"license\":\"ISC\",\"urls\":[\"bzz-raw://ab88fb2d68d3d0895134d7a0b9706250c355b5278411e11f5f9176861816e5e6\",\"dweb:/ipfs/QmUTgSUhjjw8LnkbxR1avgB4YiUK3BuWpSkzr25qX4BQzD\"]},\"project:/contracts/adapters/IBuyAdapter.sol\":{\"keccak256\":\"0x17b8eafef1ddf3d11454187527a0047250ee8718cc8f86f2cc1e05ca842c4e83\",\"license\":\"ISC\",\"urls\":[\"bzz-raw://81b5d1ee1d8427770f61387f7c079ab66c2343ff55638dc987364a2ab3b25236\",\"dweb:/ipfs/QmR4EwpxNLx6EiiKDKcCuAeGZKDUWqcaSsxXP5p963zWSn\"]},\"project:/contracts/lib/Utils.sol\":{\"keccak256\":\"0x3f69261943940b8624f9c40374155ec2842e28e1f8f93b046a5c10ab82918f6a\",\"license\":\"ISC\",\"urls\":[\"bzz-raw://d9c7ef960e53be32ddb28499134a86adc09d5c3c8fce221a17aded7350e64ea1\",\"dweb:/ipfs/QmfVxixHt7PUxsfMsYqUTVhyJY3makgvrxx7mPj4H2ikaa\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: ISC\r\n\r\npragma solidity 0.8.1;\r\n\r\nimport \"../lib/Utils.sol\";\r\n\r\ninterface IBuyAdapter {\r\n    /**\r\n     * @dev Certain adapters needs to be initialized.\r\n     * This method will be called from Augustus\r\n     */\r\n    function initialize(bytes calldata data) external;\r\n\r\n    /**\r\n     * @dev The function which performs the swap on an exchange.\r\n     * @param index Index of the router in the adapter\r\n     * @param fromToken Address of the source token\r\n     * @param toToken Address of the destination token\r\n     * @param maxFromAmount Max amount of source tokens to be swapped\r\n     * @param toAmount Amount of destination tokens to be received\r\n     * @param targetExchange Target exchange address to be called\r\n     * @param payload extra data which needs to be passed to this router\r\n     */\r\n    function buy(\r\n        uint256 index,\r\n        IERC20 fromToken,\r\n        IERC20 toToken,\r\n        uint256 maxFromAmount,\r\n        uint256 toAmount,\r\n        address targetExchange,\r\n        bytes calldata payload\r\n    ) external payable;\r\n}",
+  "sourcePath": "C:\\Users\\23396\\multiPath\\contracts\\adapters\\IBuyAdapter.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/adapters/IBuyAdapter.sol",
+    "exportedSymbols": {
+      "Address": [
+        598
+      ],
+      "IBuyAdapter": [
+        4927
+      ],
+      "IERC20": [
+        77
+      ],
+      "IERC20Permit": [
+        5773
+      ],
+      "IERC20PermitLegacy": [
+        5793
+      ],
+      "ITokenTransferProxy": [
+        3704
+      ],
+      "SafeERC20": [
+        301
+      ],
+      "SafeMath": [
+        910
+      ],
+      "Utils": [
+        6191
+      ]
+    },
+    "id": 4928,
+    "license": "ISC",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4899,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:22:11"
+      },
+      {
+        "absolutePath": "project:/contracts/lib/Utils.sol",
+        "file": "../lib/Utils.sol",
+        "id": 4900,
+        "nodeType": "ImportDirective",
+        "scope": 4928,
+        "sourceUnit": 6192,
+        "src": "61:26:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 4927,
+        "linearizedBaseContracts": [
+          4927
+        ],
+        "name": "IBuyAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 4901,
+              "nodeType": "StructuredDocumentation",
+              "src": "120:116:11",
+              "text": " @dev Certain adapters needs to be initialized.\n This method will be called from Augustus"
+            },
+            "functionSelector": "439fab91",
+            "id": 4906,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4903,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4906,
+                  "src": "262:19:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4902,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "262:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "261:21:11"
+            },
+            "returnParameters": {
+              "id": 4905,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:0:11"
+            },
+            "scope": 4927,
+            "src": "242:50:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4907,
+              "nodeType": "StructuredDocumentation",
+              "src": "300:523:11",
+              "text": " @dev The function which performs the swap on an exchange.\n @param index Index of the router in the adapter\n @param fromToken Address of the source token\n @param toToken Address of the destination token\n @param maxFromAmount Max amount of source tokens to be swapped\n @param toAmount Amount of destination tokens to be received\n @param targetExchange Target exchange address to be called\n @param payload extra data which needs to be passed to this router"
+            },
+            "functionSelector": "25deee1e",
+            "id": 4926,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4909,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "852:13:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4908,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "852:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4912,
+                  "mutability": "mutable",
+                  "name": "fromToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "876:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 4911,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4910,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "876:6:11"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "876:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4915,
+                  "mutability": "mutable",
+                  "name": "toToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "903:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$77",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 4914,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4913,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 77,
+                      "src": "903:6:11"
+                    },
+                    "referencedDeclaration": 77,
+                    "src": "903:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$77",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4917,
+                  "mutability": "mutable",
+                  "name": "maxFromAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "928:21:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4916,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "928:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4919,
+                  "mutability": "mutable",
+                  "name": "toAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "960:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4918,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "960:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4921,
+                  "mutability": "mutable",
+                  "name": "targetExchange",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "987:22:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4920,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "987:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4923,
+                  "mutability": "mutable",
+                  "name": "payload",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4926,
+                  "src": "1020:22:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4922,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1020:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "841:208:11"
+            },
+            "returnParameters": {
+              "id": 4925,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1066:0:11"
+            },
+            "scope": 4927,
+            "src": "829:238:11",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4928,
+        "src": "91:979:11"
+      }
+    ],
+    "src": "35:1035:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.1+commit.df193b15.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-07-04T14:21:43.444Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "buy(uint256,address,address,uint256,uint256,address,bytes)": {
+        "details": "The function which performs the swap on an exchange.",
+        "params": {
+          "fromToken": "Address of the source token",
+          "index": "Index of the router in the adapter",
+          "maxFromAmount": "Max amount of source tokens to be swapped",
+          "payload": "extra data which needs to be passed to this router",
+          "targetExchange": "Target exchange address to be called",
+          "toAmount": "Amount of destination tokens to be received",
+          "toToken": "Address of the destination token"
+        }
+      },
+      "initialize(bytes)": {
+        "details": "Certain adapters needs to be initialized. This method will be called from Augustus"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -5,9 +5,19 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const Web3 = require('web3');
+const fs = require('fs');
+// const JSON = require('JSON');
 
 const web3 = new Web3('https://polygon-mumbai.g.alchemy.com/v2/your-api-key');
 
+// const contractAbi = require('../build/contracts/MultiPath.json');
+
+// const contractJson = fs.readFileSync('C:/Users/23396/multiPath/build/contracts/MultiPath.json');
+
+// import multiPath from '../build/contracts/MultiPath.json';
+const multiPath  = require('../build/contracts/MultiPath.json');
+
+// contractInstance = new web3.eth.Contract(abi);
 
 // async function main() {
 
@@ -43,15 +53,15 @@ var SellData  = {
 
 // var contractAbi = getJSON("../artifacts/contracts/MultiPath.json");
 
-var contractAbi = require("C:/Users/23396/multiPath/artifacts/contracts/MultiPath.sol/MultiPath.json");
+// var contractAbi = require("../build/contracts/MultiPath.json");
 
 // const contractAddress = "0xC18109982aa8927ab4469B4ce7648288B72C1881";
 
-var Mycontract = new web3.eth.Contract(contractAbi);
+var Mycontract = new web3.eth.Contract(multiPath.abi);
 
 Mycontract.options.address = web3.utils.toChecksumAddress('0xC18109982aa8927ab4469B4ce7648288B72C1881');
 
-web3.eth.defaultAccount = owner.address;
+// web3.eth.defaultAccount = owner.address;
 
-Mycontract.methods.multiSwap(SellData).then(console.log);
+console.log(Mycontract.methods.multiSwap(SellData));
 // }
